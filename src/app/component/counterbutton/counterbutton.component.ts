@@ -5,11 +5,12 @@ import {
   increment,
   reset,
 } from '../../shared/store/counter.actions';
+import { MaterialModule } from '../../Material.Module';
 
 @Component({
   selector: 'app-counterbutton',
   standalone: true,
-  imports: [],
+  imports: [MaterialModule],
   templateUrl: './counterbutton.component.html',
   styleUrl: './counterbutton.component.css',
 })
@@ -17,7 +18,7 @@ export class CounterbuttonComponent {
   constructor(private store: Store<{ counter: number }>) {}
 
   OnIncrement() {
-    this.store.dispatch(increment(1));
+    this.store.dispatch(increment({ payload: 1 }));
   }
 
   OnDecrement() {

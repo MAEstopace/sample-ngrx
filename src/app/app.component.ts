@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { CounterbuttonComponent } from './component/counterbutton/counterbutton.component';
 import { CounterdisplayComponent } from './component/counterdisplay/counterdisplay.component';
+import { MaterialModule } from './Material.Module';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { CounterdisplayComponent } from './component/counterdisplay/counterdispl
     RouterOutlet,
     CounterbuttonComponent,
     CounterdisplayComponent,
+    MaterialModule,
   ],
 })
 export class AppComponent {
